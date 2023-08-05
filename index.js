@@ -2,44 +2,54 @@ for(var i=0 ; i<document.querySelectorAll("button").length ; i++)
 {
 document.querySelectorAll("button")[i].addEventListener("click" , function()
 {
-    if(this.innerHTML=='s')
+    var buttonInnerHTML = this.innerHTML;
+    makeSound(buttonInnerHTML);
+   
+}
+);
+}
+
+document.addEventListener("keypress" , function(event){
+    makeSound(event.key);
+});
+
+function makeSound(key){
+    if(key=='s')
     {
         var audio = new Audio("sounds/tom-1.mp3");
         audio.play();
     }
-    if(this.innerHTML=='d')
+    if(key=='d')
     {
         var audio = new Audio("sounds/tom-2.mp3");
         audio.play();
     }
-    if(this.innerHTML=='j')
+    if(key=='j')
     {
         var audio = new Audio("sounds/tom-3.mp3");
         audio.play();
     }
-    if(this.innerHTML=='k')
+    if(key=='k')
     {
         var audio = new Audio("sounds/tom-4.mp3");
         audio.play();
     }
-    if(this.innerHTML=='l')
+    if(key=='l')
     {
         var audio = new Audio("sounds/crash.mp3");
         audio.play();
     }
-    if(this.innerHTML=='w')
+    if(key=='w')
     {
         var audio = new Audio("sounds/kick-bass.mp3");
-        audio.play();
+        audio.play();a
     }
-    if(this.innerHTML=='a')
+    if(key=='a')
     {
         var audio = new Audio("sounds/snare.mp3");
         audio.play();
     }
     //switch statement can also be used
-}
-);
 }
 
 
